@@ -52,21 +52,21 @@ function changeBorderRadius() {
   }
 
   if (!checkNum(tLeft.value)) {
-    alert1.innerHTML = "Please enter numbers only";
+    alert1.innerHTML = "Please input numbers only";
     alert1.style.display = "block";
   }
 
   if (!checkNum(tRight.value)) {
-    alert2.innerHTML = "Please enter numbers only";
+    alert2.innerHTML = "Please input numbers only";
     alert2.style.display = "block";
   }
   if (!checkNum(bRight.value)) {
-    alert3.innerHTML = "Please enter numbers only";
+    alert3.innerHTML = "Please input numbers only";
     alert3.style.display = "block";
   }
 
   if (!checkNum(bLeft.value)) {
-    alert4.innerHTML = "Please enter numbers only";
+    alert4.innerHTML = "Please input numbers only";
     alert4.style.display = "block";
   }
   document.getElementById(

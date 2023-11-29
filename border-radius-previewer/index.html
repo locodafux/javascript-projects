@@ -13,14 +13,19 @@
   </head>
   <body>
     <div
-      class="container d-flex justify-content-center align-items-center"
+      class="container d-flex flex-column justify-content-center align-items-center"
       style="min-width: 100%; height: 100vh; background-color: #31304d"
     >
-      <div class="card m-5 rounded" style="width: 25rem; border: #161a30">
+      <div
+        id="box"
+        style="width: 250px; height: 250px; background-color: #161a30"
+      ></div>
+
+      <div class="card m-5 rounded" style="width: 35rem; border: #161a30">
         <div class="card-body" style="background-color: #161a30; color: white">
           <form
             onsubmit="changeBorderRadius(); return false"
-            style="position: relative"
+            class="d-flex align-items-center flex-column"
           >
             <h3 class="text-center">Border Radius Previewer</h3>
 
@@ -47,7 +52,7 @@
               </div>
             </div>
 
-            <div class="d-flex justify-content-between">
+            <div class="d-flex justify-content-center">
               <div style="margin-right: 20px">
                 <label for="bottom-left">Bottom-Left in px:</label>
                 <div class="alert alert-danger" id="alert-3"></div>
@@ -65,15 +70,10 @@
               </div>
             </div>
 
-            <button class="btn btn-primary w-100 float-right">Set</button>
+            <button class="btn btn-primary w-50 float-center">Set</button>
           </form>
         </div>
       </div>
-
-      <div
-        id="box"
-        style="width: 250px; height: 250px; background-color: #161a30"
-      ></div>
     </div>
     <script src="script.js"></script>
   </body>
