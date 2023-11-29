@@ -10,21 +10,38 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
-  
   </head>
-  <body style="padding:0; margin: 0;">
+  <body style="padding: 0; margin: 0">
     <div
       class="container d-flex justify-content-center align-items-center"
-      style="height: 100vh; min-width:100%; background-color: #31304D;"
+      style="height: 100vh; min-width: 100%; background-color: #31304d"
     >
-      <div class="card  " style="width: 400px;  border: none;">
-        <div class="card-body d-flex flex-column align-items-center rounded" style="background-color:#161A30; color:white; ">
-          <h3 class="pb-3">Binary to Decimal</h1>
+      <div class="card" style="width: 400px; border: none">
+        <div
+          class="card-body d-flex flex-column align-items-center rounded"
+          style="background-color: #161a30; color: white"
+        >
+          <h3 class="pb-3">Binary to Decimal</h3>
+          <div
+            id="alert"
+            class="alert alert-danger"
+            style="display: none"
+          ></div>
+          <input
+            type="text"
+            class="mb-3 form-control"
+            placeholder="101..."
+            id="binary"
+          />
 
-          <input type="text" class="mb-3 form-control" placeholder="101..." id="binary" />
-          <button class="btn btn-primary w-100 mb-3" onClick="binaryToDecimal()">Convert</button>
+          <button
+            class="btn btn-primary w-100 mb-3"
+            onClick="binaryToDecimal()"
+          >
+            Convert
+          </button>
 
-          <span style="font-weight: 500;" id="output">Output</span>
+          <span style="font-weight: 500" id="output">Output</span>
         </div>
       </div>
     </div>
