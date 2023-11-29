@@ -4,17 +4,17 @@ function binaryToDecimal() {
   var alert = document.getElementById("alert");
   alert.style.display = "none";
   const arrayBinary = binary.split("");
-
+  function alertOutput() {
+    alert.innerHTML = "Please enter only 1's or 0's";
+    alert.style.display = "block";
+  }
   //validation
   for (var i = 0; i < arrayBinary.length; i++) {
     if (isNaN(arrayBinary[i])) {
-      alert.innerHTML = "Please enter only 1's or 0's";
-      alert.style.display = "block";
+      alertOutput();
     }
     if (arrayBinary[i] !== "0" && arrayBinary[i] !== "1") {
-      alert.innerHTML = "Please enter only 1's or 0's";
-      alert.style.display = "block";
-
+      alertOutput();
       return;
     }
   }
