@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- User can see a display showing the current number entered or the result of the last operation.
+    User can see an entry pad containing buttons for the digits 0-9, operations - '+', '-', '/', and '=', a 'C' button (for clear), and an 'AC' button (for clear all).
+    User can enter numbers as sequences up to 8 digits long by clicking on digits in the entry pad. Entry of any digits more than 8 will be ignored. -->
+    <div class="container d-flex justify-content-center align-items-center">
+      <div class="cal d-flex flex-column">
+        <div id="display" class="display w-100"></div>
+        <div class="d-flex flex-row w-100">
+          <div id="AC" class="button col">AC</div>
+          <div id="C" class="button col">C</div>
+          <div id="%" class="button col">%</div>
+          <div id="/" class="button col">/</div>
+        </div>
+        <div class="d-flex flex-row w-100">
+          <div id="seven" class="button col">7</div>
+          <div id="eight" class="button col">8</div>
+          <div id="nine" class="button col">9</div>
+          <div id="x" class="button col">x</div>
+        </div>
+        <div class="d-flex flex-row">
+          <div id="four" class="button col">4</div>
+          <div id="five" class="button col">5</div>
+          <div id="six" class="button col">6</div>
+          <div id="+" class="button col">+</div>
+        </div>
+        <div class="d-flex flex-row">
+          <div id="one" class="button col">1</div>
+          <div id="two" class="button col">2</div>
+          <div id="three" class="button col">3</div>
+          <div id="-" class="button col">-</div>
+        </div>
+        <div class="d-flex flex-row">
+          <div id="zero" class="button col">0</div>
+          <div id="." class="button col">.</div>
+          <div id="=" class="button col-6">=</div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

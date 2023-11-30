@@ -1,0 +1,23 @@
+.container {
+  height: 100vh;
+  min-width: 100%;
+  background-color: #2e3b41;
+}
+.button {
+  width: 50px;
+  height: 80px;
+  background-color: #33414a;
+  text-align: center;
+  line-height: 80px;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  border: 0.01em solid gray;
+}
+.cal {
+  width: 20rem;
+}
+.display {
+  height: 100px;
+  background-color: white;
+}
