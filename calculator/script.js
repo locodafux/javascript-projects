@@ -14,6 +14,10 @@ var display = document.getElementById("display");
 var display = document.getElementById("display");
 var plus = document.getElementById("+");
 var times = document.getElementById("x");
+var minus = document.getElementById("-");
+var divide = document.getElementById("/");
+var equals = document.getElementById("=");
+
 var operators = ["+", "-", "/", "*"];
 console.log("wow");
 seven.addEventListener("click", sevenNum);
@@ -33,59 +37,100 @@ C.addEventListener("click", clear);
 AC.addEventListener("click", clearAll);
 plus.addEventListener("click", addNum);
 times.addEventListener("click", multiplyNum);
+divide.addEventListener("click", divideNum);
+minus.addEventListener("click", subtractNum);
+equals.addEventListener("click", equalsNum);
 
+function equalsNum() {
+  if (total(display.textContent) === undefined) {
+  } else {
+    display.innerHTML = total(display.textContent);
+  }
+}
 function addNum() {
+  if (total(display.textContent) === undefined) {
+  } else {
+    display.innerHTML = total(display.textContent);
+  }
+
   display.innerHTML += "+";
-  total();
 }
+function total(display) {
+  var text = display.split("");
+  console.log(text);
+
+  for (var i = 0; i < text.length; i++) {
+    if (text[i] === "+") {
+      var total = text.join("");
+
+      total = total.split("+");
+
+      var left = Number(total[0]);
+      var right = Number(total[1]);
+
+      return left + right;
+    }
+
+    if (text[i] === "x") {
+      var total = text.join("");
+
+      total = total.split("x");
+
+      var left = Number(total[0]);
+      var right = Number(total[1]);
+
+      return left * right;
+    }
+
+    if (text[i] === "/") {
+      var total = text.join("");
+
+      total = total.split("/");
+
+      var left = Number(total[0]);
+      var right = Number(total[1]);
+
+      return left / right;
+    }
+
+    if (text[i] === "-") {
+      var total = text.join("");
+      total = total.split("-");
+
+      var left = Number(total[0]);
+      var right = Number(total[1]);
+
+      return left - right;
+    }
+  }
+}
+
+function subtractNum() {
+  if (total(display.textContent) === undefined) {
+  } else {
+    display.innerHTML = total(display.textContent);
+  }
+
+  display.innerHTML += "-";
+}
+
 function multiplyNum() {
+  if (total(display.textContent) === undefined) {
+  } else {
+    display.innerHTML = total(display.textContent);
+  }
+
   display.innerHTML += "x";
-  total();
 }
-function total() {
-  var total = display.textContent.split("");
-  for (var i = 0; i < total.length; i++) {
-    if (total[i] === "+") {
-      sum(total);
-    }
-    if (total[i] === "x") {
-      product(total);
-    }
+
+function divideNum() {
+  if (total(display.textContent) === undefined) {
+  } else {
+    display.innerHTML = total(display.textContent);
   }
-  total = display.textContent.split("");
+
+  display.innerHTML += "/";
 }
-function sum(total) {
-  total = total.join("");
-  total = total.split("+");
-
-  var left = Number(total[0]);
-  var right = Number(total[1]);
-
-  if (right === "") {
-    right = 0;
-    display.innerHTML = left + "+";
-    return;
-  }
-  total = left + right;
-  display.innerHTML = total.toString() + "+";
-}
-
-function product(total) {
-  total = total.join("");
-  total = total.split("x");
-
-  var left = Number(total[0]);
-  var right = Number(total[1]);
-
-  if (right === 0) {
-    right = 1;
-    display.innerHTML = left + "x";
-    return;
-  }
-  total = left * right;
-  display.innerHTML = total.toString() + "x";
-}
-
 function sevenNum() {
   display.innerHTML += "7";
 }
