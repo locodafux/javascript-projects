@@ -19,5 +19,8 @@
 }
 .display {
   height: 100px;
+  line-height: 100px;
+  font-size: 45px;
   background-color: white;
+  text-align: right;
 }

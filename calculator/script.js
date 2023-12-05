@@ -12,6 +12,8 @@ var C = document.getElementById("C");
 var AC = document.getElementById("AC");
 var display = document.getElementById("display");
 var display = document.getElementById("display");
+var plus = document.getElementById("+");
+var operators = ["+", "-", "/", "*"];
 console.log("wow");
 seven.addEventListener("click", sevenNum);
 eight.addEventListener("click", eightNum);
@@ -28,7 +30,32 @@ zero.addEventListener("click", zeroNum);
 
 C.addEventListener("click", clear);
 AC.addEventListener("click", clearAll);
+plus.addEventListener("click", addNum);
 
+function addNum() {
+  display.innerHTML += "+";
+  total();
+}
+function total() {
+  var total = display.textContent.split("");
+  for (var i = 0; i < total.length; i++) {
+    if (total[i] === "+") {
+      total = total.join("");
+      total = total.split("+");
+
+      var left = Number(total[0]);
+      var right = Number(total[1]);
+
+      if (right === "") {
+        right = 0;
+        display.innerHTML += left + "+";
+        return;
+      }
+      total = left + right;
+      display.innerHTML = total.toString() + "+";
+    }
+  }
+}
 function sevenNum() {
   display.innerHTML += "7";
 }
